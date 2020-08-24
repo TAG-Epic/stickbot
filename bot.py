@@ -18,7 +18,6 @@ bot.load_extension("jishaku")
 async def stickbug(ctx: commands.Context, user: typing.Optional[discord.User]):
     message: discord.Message = ctx.message
     image_file = BytesIO()
-    print(type(user))
     if len(message.attachments) == 1:
         attachment: discord.Attachment = message.attachments[0]
         await attachment.save(image_file)
